@@ -1,0 +1,77 @@
+*{
+	box-sizing: border-box;
+}
+
+body,html{
+	margin: 0;
+	width: 100%;
+	height:100%;
+
+}
+
+
+
+
+
+/*CSS codigo*/
+
+
+section{
+	background-color: red;
+}
+
+.sectTitle h2{
+	margin: 0;
+}
+
+article{
+	background-color: green;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	height: auto;
+	
+}
+
+article h3{
+
+}
+
+article img {
+	border-radius: 50%;
+	border:3px solid ;
+}
+
+.siteTitle h3{
+	margin: 0px;
+}
+
+.siteInfo{
+	overflow: hidden;
+}
+
+.sitePhoto{
+	text-align: center;
+    width: 25%; 
+    display: inline-block;
+    float: left;
+}
+
+.siteTxt{
+	margin-left: 25%;
+}
+
+.siteTxt p{
+	margin: 0;
+}
+
+.siteMap{
+	overflow: hidden;
+}
+
+.siteMap a{
+	float: right;
+}
+
+.siteMap h4{
+	margin: 0;
+}

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+
+	background-image: url("img/xdxdxdxdxd.jpg");
+	
+}
+
+#seleccion{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 7%;
+}
+
+#principal{
+
+
+}
+
+.partes{
+	
+	height: 500px;
+	overflow-Y: scroll;
+	
+	
+}
+
+.flip-container{
+	min-height: 98%;
+	width: 98%;
+	position: relative;
+	perspective: 10000px;
+}
+
+.card {
+	position: absolute;
+	width:100%;
+	min-height:100%;
+	transition: 1.5s;
+	transform-style: preserve-3d;
+	top:1%;
+	left:1%;
+}
+
+.intercambio{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100%;
+	border: solid black 2px;
+	position: absolute;
+	backface-visibility: hidden;
+	font: 1em/1.8em Arial;	
+}
+
+.front{
+	transform: rotateY(0deg);
+	z-index: 2;
+	background-color: #f4a688;
+	color: #fbefcc;
+}
+
+.back{
+	transform: rotateY(180deg);
+	background-color: #667292;
+	color: #f1e3dd;
+}
+
+
+#selnoche:target ~ #principal > #card1{
+	transform: rotateY(180deg);
+}
+
+.invisible{
+	display: none;
+}
+
+.shadow {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5)
+}
+
+
+.shadow::after {
+  content: '';
+  position: absolute;
+  z-index: -1; 
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.8);        
+  width: 70%; 
+  left: 15%; 
+  height: 10px;
+  bottom: 0;
+}
+
+.seleccion{
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	z-index: 5;
+}
+
+.contenido{
+	
+}
+
+.seleccion > a {
+	font-size: 3em;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+.seleccion > a:hover {
+
+}
+
+#dia a:link {
+	color: #fbefcc;
+}
+
+#dia a:visited {
+	color: #fbefcc;
+}
+
+#dia a:hover {
+	color: #A63F00;
+}
+
+
+#noche a:link {
+	color: #f1e3dd;
+}
+
+#noche a:visited {
+	color: #f1e3dd;
+}
+
+#noche a:hover {
+	color: #5DD0C0;
+	transform:scale(1.1);	
+}
+
+
+
+
+/* Style */
+
+
+
+
+
+.sectTitle h2{
+	margin: 0;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+	font-size: 30px;
+	font-family:'Patua One', cursive;
+}
+
+.dayArt{
+	background-color: #8d9db6;
+	border-top: 3px solid #bccad6;
+	border-bottom: 3px solid #bccad6;
+}
+
+.dayArtD{
+	background-color: #f9ccac;
+	border-top: 3px solid #e0876a;
+	border-bottom: 3px solid #e0876a; 		
+}
+
+article{
+	height: auto;
+	
+}
+
+
+.dayArt img {
+	border-radius: 50%;
+	border:3px solid #bccad6 ;
+}
+
+.dayArtD img{
+	border-radius: 50%;
+	border:3px solid #e0876a;
+}
+
+.siteTitle h3{
+	margin: 0px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	font-size: 25px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.siteInfo{
+	overflow: hidden;
+}
+
+.sitePhoto{
+	text-align: center;
+    width: 25%; 
+    display: inline-block;
+    float: left;
+}
+
+.siteTxt{
+	margin-left: 25%;
+}
+
+.siteTxt p{
+	margin: 0;
+	padding-right: 50px;
+	padding-top: 40px;
+	font-size: 20px;
+}
+
+.siteMap{
+	overflow: hidden;
+}
+
+.siteMap a{
+	float: right;
+	font-family: 'Oswald';
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.siteMap a:link{
+	color: #e0876a;
+}
+
+.siteMap a:hover{
+	color: #f4a688;
+}
+
+
+.siteMap h4{
+	margin: 0;
+}
+
+

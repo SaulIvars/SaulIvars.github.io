@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+	background-color: #bccad6;
+}
+
+#todos {
+  border: 3px solid black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 18px;
+  background: #667292;
+}
+
+.uno {
+  border: 3px solid black;
+  text-align: left;
+  margin: 15px;
+  background: white;
+  }
+  
+.dos {
+  border: 3px solid black;
+  text-align: right;
+  margin: 15px;
+  background: white;
+}
+
+.uno, .dos{
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 18px;
+}
+h3 {
+   font-family: 'Oswald', sans-serif;
+   }
+h2 {
+   font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+	font-family: 'Patua One', cursive;
+}
+
+img {
+	width: 100px;
+	}
+
+a:link{
+	 color: black;
+}
+
+a:visited{
+	 color: black;
+}
+
+a:hover{
+	 color: blue;
+}
+
+a:active{
+	 color: red;
+}
+
+
