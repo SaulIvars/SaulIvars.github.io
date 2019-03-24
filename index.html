@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Saul Ivars</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="js.js"></script>
+<link rel="stylesheet" href="css/clipperCanario.css" type="text/css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#"><strong>SAUL IVARS</strong></a></h1>
+      <h2><strong>Always learning. Always growing.</strong></h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Modelado</a></li>
+        <li><a href="#">Acabados</a></li>
+        <li class="last"><a href="#">Animacion</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="slider"><a href="#"><img src="img/blacktop.jpg" alt=""></a></section>
+    <!-- PORTFOLIO -->
+<div class="main">
+
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> All</button>
+    <button class="btn" onclick="filterSelection('nature')"> Modelado</button>
+    <button class="btn" onclick="filterSelection('cars')"> Acabados</button>
+    <button class="btn" onclick="filterSelection('people')"> Animación</button>
+  </div>
+
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column nature">
+      <div class="content">
+        <img src="img/mod1.jpg" alt="edificio" style="width:100%">
+        <h4>Arquitectura</h4>
+        <p>Col·laborando con algunas empresas de arquitectura para pre visualizar los distintos proyectos.</p>
+      </div>
+    </div>
+    <div class="column nature">
+      <div class="content">
+      <img src="img/mod2.jpg" alt="jaguar" style="width:100%">
+        <h4>Jaguar</h4>
+        <p>Modelado de un jaguar con su rig listo para funcionar.</p>
+      </div>
+    </div>
+    <div class="column nature">
+      <div class="content">
+      <img src="img/mod3.jpg" alt="ninos" style="width:100%">
+        <h4>LowPoly Kids</h4>
+        <p>Tres personajes de niños al estilo lowpoly.</p>
+      </div>
+    </div>
+    
+    <div class="column cars">
+      <div class="content">
+        <img src="img/acab1.jpg" alt="caja torasica" style="width:100%">
+        <h4>Caja Torasica</h4>
+        <p>Simulacion de tejidos y solidos.</p>
+      </div>
+    </div>
+    <div class="column cars">
+      <div class="content">
+      <img src="img/acab2.jpg" alt="escavadora" style="width:100%">
+        <h4>Escavadora</h4>
+        <p>Escavadora usando la tenica de material por Faces.</p>
+      </div>
+    </div>
+    <div class="column cars">
+      <div class="content">
+      <img src="img/acab3.jpg" alt="robot" style="width:100%">
+        <h4>Warframe</h4>
+        <p>Texturizado al estilo Warframe.</p>
+      </div>
+    </div>
+
+    <div class="column people">
+      <div class="content">
+        <img src="img/anim1.gif" alt="ataque metralleta" style="width:100%">
+        <h4>Shut 'n Gun</h4>
+        <p>Animacion en 2D de un disparo al estilo LOL.</p>
+      </div>
+    </div>
+    <div class="column people">
+      <div class="content">
+      <img src="img/anim2.gif" alt="cringe" style="width:100%">
+        <h4>Cringe</h4>
+        <p>3D animation de degeneracion con loop.</p>
+      </div>
+    </div>
+    <div class="column people">
+      <div class="content">
+      <img src="img/anim3.gif" alt="ataque espada" style="width:100%">
+        <h4>Samurahi Hit</h4>
+        <p>Animacion de ataque preparada para ser exportada a Unity 3D.</p>
+      </div>
+    </div>
+  <!-- END GRID -->
+  </div>
+
+  <!-- END MAIN -->
+  </div>
+  <!-- Script portfolio gallery -->
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+
+    <!-- main content -->
+    <div id="content">
+      <!-- section 2 -->
+      <section>        
+        <!-- article 1 -->
+        <article>
+          <h3>Siempre aprendiendo, Siempre evolucionando:</h3>
+          <p>Sé firme en tus actitudes y perseverante en tu ideal.
+Pero sé paciente, no pretendiendo que todo te llegue de inmediato.
+Haz tiempo para todo, y todo lo que es tuyo,vendrá a tus manos en el momento oportuno.
+
+Aprende a esperar el momento exacto para recibir los beneficios que reclamas.
+Espera con paciencia a que maduren los frutos para poder apreciar debidamente su dulzura.
+</p>
+          <p>No seas esclavo del pasado y los recuerdos tristes.
+No revuelvas una herida que está cicatrizada. No rememores dolores y sufrimientos antiguos.
+¡Lo que pasó, pasó!
+
+De ahora en adelante procura construir una vida nueva, dirigida hacia lo alto y camina hacia delante, sin mirar hacia atrás.
+Haz como el sol que nace cada día, sin acordarse de la noche que pasó.
+Sólo contempla la meta y no veas que tan difícil es alcanzarla.</p>
+        </article>
+        <!-- / articles -->
+      </section>
+      <!-- section 2 -->
+    </div>
+    <!-- right column -->
+    <aside id="right_column">
+      <h2 class="title">Redes Sociale</h2>
+      <section class="last">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </section>
+    </aside>
+    </div>
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2019 - <a href="#">Saul Ivars</a></p>
+  </footer>
+</div>
+</body>
+</html>
